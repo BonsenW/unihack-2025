@@ -6,7 +6,7 @@ import { connectDb } from './db'
 import { VectorizeDoc, Db, Collection } from "@datastax/astra-db-ts";
 import fs from "fs";
 
-const dummyData = require('./data/noIdDummyData.json')
+// const dummyData = require('./data/dummyData.json')
 
 // JSON middleware 
 app.use(express.json());
@@ -27,6 +27,7 @@ app.get('*', (req, res) => {
 // Defining interface for user information to later parse
 // The VectorizeDoc interface adds a $vectorize key.
 export interface UserInfo extends VectorizeDoc {
+    "userId": string;
     "gender": string;
     "age": string;
     "interests": string;
@@ -104,10 +105,10 @@ async function uploadJsonData(
 
   await uploadJsonData(
     collection,
-    "./data/noIdDummyData.json",
+    './data/dummyData.json',
     (data) => {
       // Concatenate all the fields into one string to be vectorized
-      return `${data.gender} | ${data.age.join(", ")} | ${data.interests.join(", ")} | ${data.pets} | ${data.budgetRange} | ${data.garageSpace}`;
+      return `${data.userId} | ${data.gender} | ${data.age.join(", ")} | ${data.interests.join(", ")} | ${data.pets} | ${data.budgetRange} | ${data.garageSpace}`;
     },
   );
 })();
