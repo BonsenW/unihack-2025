@@ -129,4 +129,36 @@ const startServer = async () => {
     app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
 };
 
+let inputValue = ""; // Insert input value here
+
+fetch(
+  "https://astra.datastax.com/api/v1/run/f83f4261-bab2-47c7-9330-22f0b2b6444e?stream=false",
+  {
+    method: "POST",
+    headers: {
+      "Authorization": process.env.DATASTAX_TOKEN,
+      "Content-Type": "application/json",
+			"x-api-key": process.env.GEMINI_API_KEY
+    },
+    body: JSON.stringify({
+			input_value: inputValue, 
+      output_type: "chat",
+      input_type: "chat",
+      tweaks: {
+        "ChatInput-DTz08": {},
+        "Prompt-zjQZw": {},
+        "ChatOutput-QRH2J": {},
+        "ParseData-wovQq": {},
+        "GoogleGenerativeAIModel-AfoqL": {},
+        "AstraDB-lTea5": {}
+}
+    }),
+  },
+)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
+
 startServer();
+
