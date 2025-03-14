@@ -132,13 +132,12 @@ const startServer = async () => {
 let inputValue = ""; // Insert input value here
 
 fetch(
-  "https://astra.datastax.com/api/v1/run/f83f4261-bab2-47c7-9330-22f0b2b6444e?stream=false",
+  "https://api.langflow.astra.datastax.com/lf/264dd2c4-6626-4af0-9f43-ef569e57dc2c/api/v1/run/f83f4261-bab2-47c7-9330-22f0b2b6444e?stream=false",
   {
     method: "POST",
     headers: {
-      "Authorization": process.env.DATASTAX_TOKEN,
-      "Content-Type": "application/json",
-			"x-api-key": process.env.GEMINI_API_KEY
+      "Authorization": `Bearer ${process.env.DATASTAX_TOKEN}`,
+      "Content-Type": "application/json"
     },
     body: JSON.stringify({
 			input_value: inputValue, 
