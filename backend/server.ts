@@ -95,23 +95,23 @@ async function uploadJsonData(
   console.log(`Inserted ${inserted.insertedCount} items.`);
 }
 
-(async function () {
-  const database = connectDb();
+// (async function () {
+//   const database = connectDb();
 
-  const collection = await createCollection(
-    database,
-    "user_preferences",
-  );
+//   const collection = await createCollection(
+//     database,
+//     "user_preferences",
+//   );
 
-  await uploadJsonData(
-    collection,
-    './data/dummyData.json',
-    (data) => {
-      // Concatenate all the fields into one string to be vectorized
-      return `${data.userId} | ${data.gender} | ${data.age.join(", ")} | ${data.interests.join(", ")} | ${data.pets} | ${data.budgetRange} | ${data.garageSpace}`;
-    },
-  );
-})();
+//   await uploadJsonData(
+//     collection,
+//     './data/dummyData.json',
+//     (data) => {
+//       // Concatenate all the fields into one string to be vectorized
+//       return `${data.userId} | ${data.gender} | ${data.age.join(", ")} | ${data.interests.join(", ")} | ${data.pets} | ${data.budgetRange} | ${data.garageSpace}`;
+//     },
+//   );
+// })();
 
 
 const PORT = process.env.PORT || 5000;
