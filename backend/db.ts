@@ -31,7 +31,7 @@ require('dotenv').config();
  * `ASTRA_DB_API_ENDPOINT` or `ASTRA_DB_APPLICATION_TOKEN` are not defined.
  */
 export function connectDb(): Db {
-  const { ASTRA_DB_API_ENDPOINT: endpoint, ASTRA_DB_APPLICATION_TOKEN: token } =
+  const { ASTRA_DB_CONN_STRING: endpoint, ASTRA_DB_TOKEN: token } =
     process.env;
 
   if (!token || !endpoint) {

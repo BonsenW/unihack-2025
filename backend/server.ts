@@ -99,7 +99,7 @@ async function uploadJsonData(
 
   const collection = await createCollection(
     database,
-    "quickstart_collection",
+    "user_preferences",
   );
 
   await uploadJsonData(
