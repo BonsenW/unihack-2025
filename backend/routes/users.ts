@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 import { flow } from '../langflow';
 import { mdb } from '../mongo';
-import User from '../models/User';
+import User from '../models/user';
 
 import dummyData from '../data/dummyData.json';
 
