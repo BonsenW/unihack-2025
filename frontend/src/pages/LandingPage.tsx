@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
                 <button className="navbar-btn">Contact</button>
             </nav>
 
-            <div className="flex justify-between">
-                <div className="flex flex-col pt-32">
+            <div className="flex relative justify-between px-4">
+                <div className="roomies-text flex flex-col pt-32">
                     <h1>Roomies</h1>
                     <h2>AI Powered matching idk...</h2>
                     <p>Intuitive design <br />Catered towards your specific needs</p>
