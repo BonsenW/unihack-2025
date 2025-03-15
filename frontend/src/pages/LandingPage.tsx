@@ -3,6 +3,7 @@ import React from "react";
 import Spline from "@splinetool/react-spline";
 import { Button } from "@/components/ui/button";
 import LandingPageNavBar from "@/components/custom/LandingPageNavBar";
+import { Link } from "react-router-dom";
 
 const LandingPage: React.FC = () => {
     return (
@@ -25,9 +26,11 @@ const LandingPage: React.FC = () => {
                     <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
                         Intuitive design <br /> Catered towards your specific needs No more endlessly searching for a place to live, <br /> And no more incompatible room mates
                     </p>
-                    <Button className="px-8 py-4 text-xl font-semibold text-white bg-gradient-to-r from-[#1F1F41] to-[#899cfb] rounded-full transition-transform hover:scale-105 animate-gradient">
-                        Find your soul<i>(room)</i>mate
-                    </Button>
+                    <Link to="/Login">
+                        <Button className="px-8 py-4 text-xl font-semibold text-white bg-gradient-to-r from-[#1F1F41] to-[#899cfb] rounded-full transition-transform hover:scale-105 animate-gradient">
+                            Find your soul<i>(room)</i>mate
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* Right Spline 3D Model Section */}
