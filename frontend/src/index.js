@@ -1,13 +1,14 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/NavBar/NavBar';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Navbar></Navbar>
+    <App></App>
   </React.StrictMode>
 );
