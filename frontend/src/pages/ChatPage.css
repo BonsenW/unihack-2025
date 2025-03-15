@@ -32,18 +32,52 @@ body{
     width: 75%;
     display: flex;
     flex-direction: column;
-    padding: 30px;
 }
 
 .profile-detail {
     border-bottom: 2px solid #333;
+    padding: 10px 30px;
 }
 
-#user-name {
+.friend-detail {
+    padding: 10px 30px;
+    border-bottom: 2px solid #333;
+}
+
+.msg-container {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+
+.messages {
+    flex: 1;
+}
+
+.send-container{
+    margin-top: auto;
+    width: 100%;
+}
+
+.send-container input {
+    border: 1px solid grey;
+    width: 90%;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.send-container input,
+.send-container Button {
+  flex: 1;
+}
+
+#direct-msg {
+    margin-top: 40px;
 }
 
 h1 {
     font-size: 36px;
-    line-height: 100px;
+    line-height: 80px;
 }
