@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import "./ProfilePage.css";
 import { Button } from "@/components/ui/button";
 
@@ -12,13 +12,14 @@ const ProfilePage: React.FC = () => {
 
     return (
         <>
+        <Card className="card bg-[#ECECDF]">
             <div className="flex flex-col gap-12 justify-center items-center w-screen h-screen bg-[#ECECDF]">
-            
+                <div className="text-center">
+                    <CardTitle className="profile-title text-[#1F1F41] align-center"><b>Edit Profile</b></CardTitle>
+                    <p>Edit all your personal information, including email address</p>
+                </div>
                 <Card className="w-150 p-6 rounded-2xl bg-[#ECECDF]/40">
-                    <CardHeader className="text-center">
-                            <CardTitle className="profile-title text-6xl text-[#1F1F41] align-middle"><b>Edit Profile</b></CardTitle>
-                    </CardHeader>
-                    
+                
 
                     <CardContent className="flex flex-col gap-4 w-full bg-[#ECECDF]/20">
 
@@ -29,7 +30,7 @@ const ProfilePage: React.FC = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="Enter your name"
-                            className="input-field w-125 text-[gray] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
+                            className="input-field w-125 text-[black] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
                                 
                             </input>
     
@@ -39,7 +40,7 @@ const ProfilePage: React.FC = () => {
                         <select
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
-                            className="dropdown-field w-125 text-[gray] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
+                            className="dropdown-field w-125 text-[black] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
                             <option value="">Select your age</option>
                             <option value="18-20">18-20</option>
                             <option value="21-24">21-24</option>
@@ -53,7 +54,7 @@ const ProfilePage: React.FC = () => {
                         <select
                             value={gender}
                             onChange={(e) => setGender(e.target.value)}
-                            className="dropdown-field w-125 text-[gray] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
+                            className="dropdown-field w-125 text-[black] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
                             <option value="">Select your gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -66,7 +67,7 @@ const ProfilePage: React.FC = () => {
                         <select
                             value={location}
                             onChange={(e) => setLocation(e.target.value)}
-                            className="dropdown-field w-125 text-[gray] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
+                            className="dropdown-field w-125 text-[black] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
                             <option value="">Select your Location</option>
                             <option value="suburb-clayton">Clayton</option>
                             <option value="suburb-huntingdale">Huntingdale</option>
@@ -83,14 +84,19 @@ const ProfilePage: React.FC = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="Enter your email address"
-                            className="input-field w-125 text-[gray] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
+                            className="input-field w-125 text-[black] bg-[#ECECDF] border-2 border-black rounded-md  pl-3 pr-10 py-2 appearance-none">
                                 
                             </input>
+                        
                         
 
                     </CardContent>  
                 </Card>
-            </div>
+                <div className="flex justify-center "> {/* Added wrapper div to center button */}
+                    <Button className="save-button">Save Changes</Button>
+                </div>
+                </div>
+            </Card>
         </>
     );
 };
