@@ -1,0 +1,136 @@
+body{
+	height: 100vh;
+	width: 100vw;
+    background-color: #ECECDF;
+	background: radial-gradient(at 18% 99%, 
+    #899cfb 0px, transparent 50%),
+    radial-gradient(at 80% 50%, #899cfb 0px, transparent 50%);
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px; /* Optional padding for the navbar */
+  }
+
+.navbar-btn {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #1F1F41;
+    width: 216px;
+    height: 54px;
+    background-color: #ffffff00;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    
+  }
+  
+  .navbar-btn:hover {
+    background-color: #1F1F41;  /* Darker background on hover */
+    color: #ffffff;  /* White text color on hover */
+
+  }
+
+
+  /* Text with linear gradient animation */
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-style:normal;
+    font-weight: 800;
+    font-size: 96px;
+    line-height: 100px;
+    text-align: left;
+    align-content: center;
+    color: transparent; /* Set text color to transparent */
+    background: linear-gradient(30deg, #1F1F41, #899cfb);
+    background-size: 400% 400%; /* Make the gradient large enough to move */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    animation: gradientAnimation 4s ease infinite; /* Apply animation */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    align-content: center;
+    color: black /* Set text color to transparent */
+  
+  }
+
+p {
+    font-family: 'Poppins' sans-serif;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 10%;
+
+}
+
+.spline-container {
+    width: 600px;
+    height: 700px;
+    margin-left: auto;
+    align-content: center;
+    margin-bottom: 20%;
+}
+
+.ykbutton {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;  
+    width: 387px;
+    height: 64px;
+    background: linear-gradient(30deg, #1F1F41, #899cfb);
+    background-size: 400% 400%;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    animation: buttonAnimation 4s ease infinite; /* Apply animation */
+}
+
+/* Hover effect */
+.ykbutton:hover {
+    background-position: 100% 0; /* Animate the gradient */
+    /* White text on hover */
+    transform: scale(1.05);
+}
+
+
+
+@keyframes buttonAnimation {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+100% {
+  background-position: 0% 50%;
+}
+}
