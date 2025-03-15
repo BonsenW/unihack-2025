@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@datastax/astra-db-ts": "^1.5.0",
+    "@datastax/langflow-client": "^0.2.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
