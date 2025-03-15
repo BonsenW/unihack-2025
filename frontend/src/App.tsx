@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import LandingPageNavBar from "./components/custom/LandingPageNavBar";
+import LandingPage from "./pages/LandingPage"
 
 function App() {
     return (
         <>
-            <LandingPageNavBar />
+            <LandingPage />
             {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -13,7 +13,5 @@ function App() {
         </>
     );
 }
-
-
 
 export default App;
