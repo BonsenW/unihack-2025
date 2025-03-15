@@ -12,7 +12,7 @@ router.get('/:userId', async (req, res) => {
         const data = mdb.collection('users')
         const userData = await data.findOne({userId: userId})
         console.log(userData)
-        res.status(200).json({message: "success"})
+        res.status(200).json(userData)
         return
     } catch (error) {
         console.log(error)
