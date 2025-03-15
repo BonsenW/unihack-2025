@@ -1,104 +1,84 @@
-body{
-	height: 100vh;
-	width: 100vw;
+body {
+    height: 100vh;
+    width: 100vw;
     background-color: #ECECDF;
-	background: radial-gradient(at 18% 99%, 
-    #899cfb 0px, transparent 50%),
-    radial-gradient(at 80% 50%, #899cfb 0px, transparent 50%);
+    background: radial-gradient(at 18% 99%,
+            #899cfb 0px, transparent 50%),
+        radial-gradient(at 80% 50%, #899cfb 0px, transparent 50%);
 }
 
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Align the button to the right */
-    align-items: center; /* Center vertically */
-    padding: 10px 20px; /* Optional padding for the navbar */
-  }
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+}
 
 .navbar-btn {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
     text-align: center;
     color: #1F1F41;
     width: 216px;
     height: 54px;
-    background-color: #ffffff00;
+    background: transparent;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
-    
-  }
-  
-  .navbar-btn:hover {
-    background-color: #1F1F41;  /* Darker background on hover */
-    color: #ffffff;  /* White text color on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-  }
+.navbar-btn:hover {
+    background-color: #1F1F41;
+    color: #ffffff;
+}
 
-
-  /* Text with linear gradient animation */
-
-.roomies-h1{
-  font-family: 'Inter', sans-serif;
-    font-style:normal;
+/* Gradient Animated Text */
+.roomies-h1 {
+    font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: 96px;
-    line-height: 100px;
     text-align: left;
-    align-content: center;
-    color: transparent; /* Set text color to transparent */
+    color: transparent;
     background: linear-gradient(30deg, #1F1F41, #899cfb);
-    background-size: 400% 400%; /* Make the gradient large enough to move */
-    -webkit-background-clip: text; /* Clip the background to the text */
-    background-clip: text; /* Clip the background to the text */
-    animation: gradientAnimation 4s ease infinite; /* Apply animation */
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientAnimation 4s ease infinite;
 }
-  
-  @keyframes gradientAnimation {
+
+@keyframes gradientAnimation {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
+
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
 
 h2 {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 5% 0;
     text-align: left;
-    align-content: center;
-    color: black /* Set text color to transparent */
-  
-  }
+    color: black;
+}
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-style: normal;
     text-align: left;
 }
 
-.roomies-p{
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    text-align: left;
-    margin-bottom: 20%;
-}
-
-.roomies-text{
-  flex:1;
-  max-width: 50%;
-  margin-left:120px;
-  margin-top: -4.6%;
+.roomies-text {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 120px;
 }
 
 .spline-container {
@@ -108,18 +88,14 @@ p {
     width: 600px;
     height: 700px;
     margin-left: auto;
-    align-content: center;
-    margin-top: -6%; 
 }
 
 .ykbutton {
     font-family: 'Inter', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 24px;
     text-align: center;
-    color: #ffffff;  
+    color: #ffffff;
     width: 387px;
     height: 64px;
     background: linear-gradient(30deg, #1F1F41, #899cfb);
@@ -127,58 +103,49 @@ p {
     border-radius: 50px;
     cursor: pointer;
     border: none;
-    animation: buttonAnimation 4s ease infinite; /* Apply animation */
+    animation: buttonAnimation 4s ease infinite;
 }
 
-/* Hover effect */
 .ykbutton:hover {
-    background-position: 100% 0; /* Animate the gradient */
-    /* White text on hover */
+    background-position: 100% 0;
     transform: scale(1.05);
 }
 
-
-
 @keyframes buttonAnimation {
-0% {
-  background-position: 0% 50%;
-}
-50% {
-  background-position: 100% 50%;
-}
-100% {
-  background-position: 0% 50%;
-}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width: 1200px) {
-  .roomies-text {
-      margin-left: 60px; /* Reduce left margin for smaller screens */
-  }
 
-  .spline-container {
-      margin-right: 60px; /* Reduce right margin for smaller screens */
-  }
+    .roomies-text,
+    .spline-container {
+        margin: 0 60px;
+    }
 }
 
 @media (max-width: 992px) {
-  .roomies-text {
-      margin-left: 30px; /* Further reduce left margin */
-  }
 
-  .spline-container {
-      margin-right: 30px; /* Further reduce right margin */
-  }
+    .roomies-text,
+    .spline-container {
+        margin: 0 30px;
+    }
 }
 
 @media (max-width: 768px) {
-  .roomies-text {
-      margin-left: 20px; /* Minimal left margin for mobile */
-      max-width: 100%; /* Allow full width on small screens */
-  }
 
-  .spline-container {
-      margin-right: 20px; /* Minimal right margin for mobile */
-      max-width: 100%; /* Allow full width on small screens */
-  }
+    .roomies-text,
+    .spline-container {
+        margin: 0 20px;
+        max-width: 100%;
+    }
 }

@@ -1,0 +1,83 @@
+body{
+	height: 100vh;
+	width: 100vw;
+    background-color: #ECECDF;
+	background: radial-gradient(at 18% 99%, 
+    #899cfb 0px, transparent 50%),
+    radial-gradient(at 80% 50%, #899cfb 0px, transparent 50%);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatPage {
+    height: 80vh;
+    width: 80vw;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #333;
+}
+
+.chat-left {
+    width: 25%;
+    border-right: 2px solid #333;
+    background-color: #899cfb;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-right {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-detail {
+    border-bottom: 2px solid #333;
+    padding: 10px 30px;
+}
+
+.friend-detail {
+    padding: 10px 30px;
+    border-bottom: 2px solid #333;
+}
+
+.msg-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+}
+
+.messages {
+    flex: 1;
+}
+
+.send-container{
+    margin-top: auto;
+    width: 100%;
+}
+
+.send-container input {
+    border: 1px solid grey;
+    width: 90%;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.send-container input,
+.send-container Button {
+  flex: 1;
+}
+
+#direct-msg {
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 80px;
+}

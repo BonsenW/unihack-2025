@@ -1,12 +1,19 @@
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
+import { Routes, Route } from "react-router-dom";
+import ProfilePage from "./pages/ProfilePage";
 import LandingPage from "./pages/LandingPage";
-import ProfilePreferences from "./pages/ProfilePreferences";
-import { Home } from "lucide-react";
+
 
 function App() {
     return (
-        <ProfilePreferences></ProfilePreferences>
+        <>
+            <ProfilePage></ProfilePage>
+            <LandingPage />
+            {/* <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes> */}
+        </>
     );
 }
 
