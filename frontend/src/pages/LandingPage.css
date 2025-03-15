@@ -80,12 +80,6 @@ h2 {
   
   }
 
-.roomies-text{
-  flex:1;
-  max-width: 60%;
-  margin-left:120px
-}
-
 p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -94,15 +88,22 @@ p {
 
 }
 
+.roomies-text{
+  flex:1;
+  max-width: 50%;
+  margin-left:120px;
+  margin-top: -4.6%;
+}
+
 .spline-container {
     flex: 1;
-    max-width: 60%;
+    max-width: 50%;
     margin-right: 120px;
     width: 600px;
     height: 700px;
     margin-left: auto;
     align-content: center;
-    margin-bottom: 20%;
+    margin-top: -6%; 
 }
 
 .ykbutton {
