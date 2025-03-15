@@ -1,6 +1,6 @@
 // db.js
 require('dotenv').config();
-const { DataAPIClient } = require('@datastax/astra-db-ts');
+import { DataAPIClient } from '@datastax/astra-db-ts';
 
 // Initialize the client
 const client = new DataAPIClient(process.env.ASTRA_DB_TOKEN);

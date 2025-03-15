@@ -1,32 +1,31 @@
 require('dotenv').config()
-const express = require('express');
-const path = require('path');
-const app = express();
+import express from 'express';
+import path from 'path';
 import { connectDb } from './db'
+import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 
-const dummyData = require('./data/noIdDummyData.json')
+import dummyData from './data/noIdDummyData.json';
+
+const app = express();
 
 // JSON middleware 
 app.use(express.json());
 
 // API Routes config
-const userRoute = require('./routes/users');
+import userRoute from './routes/users'
 app.use('/api/users', userRoute);
 
 // Serve static files from React
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-// Default route
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
-
-
-
 const PORT = process.env.PORT || 5000;
+
+// let mdb;
 
 // Start server
 const startServer = async () => {
+    try {
     const db = await connectDb();
 
     // const userCollection = db.collection('user_preferences');
@@ -34,8 +33,15 @@ const startServer = async () => {
 
     // userCollection.insertMany(dummyData)
 
+    const mongoConnection = await mongoose.connect(process.env.MONGO_DB_CONN_STRING)
+    // mdb = mongoConnection.connection.db
 
     app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+    } catch (error) {
+        console.log(error)
+    }
 };
 
 startServer();
+
+// export { mdb }
