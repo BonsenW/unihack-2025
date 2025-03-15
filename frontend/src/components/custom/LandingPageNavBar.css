@@ -1,0 +1,26 @@
+.navbar-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #1F1F41;
+    padding: 0px 24px;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+}
+
+.navbar-btn:hover {
+    background-color: #1F1F41;
+    color: #ffffff;
+}
+
+.text-primary {
+    color: #1F1F41;
+    /* Match your theme color */
+}
