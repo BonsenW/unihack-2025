@@ -4,10 +4,16 @@ import { Button } from "@/components/ui/button";
 
 const ChatPage: React.FC = () => {
     return (
-        <div>
-            <div className='chat-left'></div>
+        <div className="chatPage">
+            <div className='chat-left'>
+                <div className='profile-detail'>
+                    <h1 id="user-name">Name</h1>
+                    <p>Direct Messages</p>
+                </div>
+            </div>
             <div className='chat-right'>
-                <h1>Hello, React with TypeScript!</h1>
+                <h1>Friend name</h1>
+                <p>Description</p>
                 <div className="msg-container">
                     <form className="send-container">
                         <input type="text" id="message-input"></input>
