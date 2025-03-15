@@ -8,6 +8,7 @@ import { VectorizeDoc, Db, Collection } from "@datastax/astra-db-ts";
 import fs from "fs";
 
 import { initializeLangflow } from './langflow.js';
+import { InitializeMongoDb } from './mongo.js';
 
 // const dummyData = require('./data/dummyData.json')
 
@@ -22,9 +23,9 @@ app.use('/api/users', userRoute);
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // Default route
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+// });
 
 
 // Defining interface for user information to later parse
@@ -126,6 +127,7 @@ const startServer = async () => {
     const db = await connectDb();
 
     await initializeLangflow();
+    await InitializeMongoDb();
 
 
 
