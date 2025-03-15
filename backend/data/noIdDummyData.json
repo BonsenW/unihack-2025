@@ -1,0 +1,82 @@
+[
+    {
+      "gender": "No preference",
+      "age": ["21-24", "25-30"],
+      "interests": ["Games", "Sports", "Music"],
+      "pets": "No preference",
+      "budgetRange": "200-300",
+      "garageSpace": "1 car"
+    },
+    {
+      "gender": "Female",
+      "age": ["25-30", "30-34"],
+      "interests": ["Cooking", "Photography", "Dance"],
+      "pets": "Cats",
+      "budgetRange": "300-400",
+      "garageSpace": "N/A"
+    },
+    {
+      "gender": "No preference",
+      "age": ["18-20", "21-24"],
+      "interests": ["Games", "Food", "Music"],
+      "pets": "Dogs",
+      "budgetRange": "<200",
+      "garageSpace": "N/A"
+    },
+    {
+      "gender": "Male",
+      "age": ["30-34", "35+"],
+      "interests": ["Sports", "Photography"],
+      "pets": "No preference",
+      "budgetRange": "400+",
+      "garageSpace": "2 cars"
+    },
+    {
+      "gender": "Female",
+      "age": ["18-20", "21-24", "25-30"],
+      "interests": ["Cooking", "Food", "Dance"],
+      "pets": "Cats",
+      "budgetRange": "200-300",
+      "garageSpace": "1 car"
+    },
+    {
+      "gender": "Male",
+      "age": ["35+"],
+      "interests": ["Photography", "Music"],
+      "pets": "Other",
+      "budgetRange": "300-400",
+      "garageSpace": "N/A"
+    },
+    {
+      "gender": "Prefer not to disclose",
+      "age": ["25-30", "30-34"],
+      "interests": ["Games", "Sports", "Food"],
+      "pets": "No preference",
+      "budgetRange": "400+",
+      "garageSpace": "1 car"
+    },
+    {
+      "gender": "No preference",
+      "age": ["18-20", "21-24"],
+      "interests": ["Cooking", "Music", "Dance"],
+      "pets": "No pets",
+      "budgetRange": "<200",
+      "garageSpace": "N/A"
+    },
+    {
+      "gender": "Male",
+      "age": ["21-24"],
+      "interests": ["Games", "Photography", "Sports"],
+      "pets": "Dogs",
+      "budgetRange": "200-300",
+      "garageSpace": "1 car"
+    },
+    {
+      "gender": "Female",
+      "age": ["25-30", "30-34", "35+"],
+      "interests": ["Food", "Music", "Dance"],
+      "pets": "No preference",
+      "budgetRange": "300-400",
+      "garageSpace": "2 cars"
+    }
+  ]
