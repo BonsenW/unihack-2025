@@ -1,8 +1,8 @@
 .preferences-title{
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
+    font-size: 64px;
+    font-weight: 800;
 }
 
 h3{
@@ -10,3 +10,42 @@ h3{
     font-style: normal;
     text-align: left;
 }
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    text-align: left;
+    font-size: 18px;
+    font-weight:500;
+}
+
+.save-button {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #1F1F41;  
+    width: 216px;
+    height: 54px;
+    background: #1f1f4100;
+    align-content: center;
+    border-color: #1F1F41;
+    border-radius: 50px;
+    border-width: 2px;
+    cursor: pointer;
+    
+  }
+  
+  /* Hover effect */
+  .save-button:hover {
+    background-color: #1F1F41;  /* Darker background on hover */
+    color: #ffffff;  /* White text color on hover */
+  }
+
+  p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    text-align: left;
+  }
