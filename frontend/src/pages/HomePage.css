@@ -7,3 +7,9 @@ body{
     #899cfb 0px, transparent 50%),
     radial-gradient(at 57% 33%, #899cfb 0px, transparent 50%);
 }
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    text-align: left;
+}

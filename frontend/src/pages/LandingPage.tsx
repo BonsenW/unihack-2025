@@ -13,9 +13,9 @@ const Navbar: React.FC = () => {
 
             <div className="flex relative justify-between px-4">
                 <div className="roomies-text flex flex-col pt-32">
-                    <h1>Roomies</h1>
+                    <h1 className="roomies-h1">Roomies</h1>
                     <h2>AI Powered matching idk...</h2>
-                    <p>Intuitive design <br />Catered towards your specific needs</p>
+                    <p className="roomies-p">Intuitive design <br />Catered towards your specific needs</p>
                     <Button className="ykbutton">Find your soul<i>(room)</i>mate</Button>
                 </div>
                 <div className="spline-container">

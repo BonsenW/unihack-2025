@@ -39,8 +39,9 @@ body{
 
 
   /* Text with linear gradient animation */
-h1 {
-    font-family: 'Inter', sans-serif;
+
+.roomies-h1{
+  font-family: 'Inter', sans-serif;
     font-style:normal;
     font-weight: 800;
     font-size: 96px;
@@ -53,7 +54,7 @@ h1 {
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text; /* Clip the background to the text */
     animation: gradientAnimation 4s ease infinite; /* Apply animation */
-  }
+}
   
   @keyframes gradientAnimation {
     0% {
@@ -84,8 +85,13 @@ p {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     text-align: left;
-    margin-bottom: 10%;
+}
 
+.roomies-p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 20%;
 }
 
 .roomies-text{
