@@ -41,6 +41,12 @@ const HomePage: React.FC = () => {
         <div>
             <div className="relative flex justify-center items-center h-screen">
                 <div className="relative w-100 h-100">
+                    <h1 className="relative z-50 left-50 top-20 text-5xl text-black"><b>Lola Smith</b></h1>
+                    <h2 className="relative z-50 left-50 top-20 text-black">
+                    F23
+                    </h2>
+                    <h2 className="relative z-50 left-50 top-20 text-black">2km away from you (nearby!)</h2>
+                    <p className="relative z-50 left-50 top-20 text-black">Likes <b>cooking</b>, <b>travelling</b>, and <b>F1</b></p>
                     <img
                         src="/image2.png"
                         alt="Image 2"
