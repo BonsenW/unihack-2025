@@ -39,8 +39,9 @@ body{
 
 
   /* Text with linear gradient animation */
-h1 {
-    font-family: 'Inter', sans-serif;
+
+.roomies-h1{
+  font-family: 'Inter', sans-serif;
     font-style:normal;
     font-weight: 800;
     font-size: 96px;
@@ -53,7 +54,7 @@ h1 {
     -webkit-background-clip: text; /* Clip the background to the text */
     background-clip: text; /* Clip the background to the text */
     animation: gradientAnimation 4s ease infinite; /* Apply animation */
-  }
+}
   
   @keyframes gradientAnimation {
     0% {
@@ -81,19 +82,34 @@ h2 {
   }
 
 p {
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     text-align: left;
-    margin-bottom: 10%;
+}
 
+.roomies-p{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 20%;
+}
+
+.roomies-text{
+  flex:1;
+  max-width: 50%;
+  margin-left:120px;
+  margin-top: -4.6%;
 }
 
 .spline-container {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 120px;
     width: 600px;
     height: 700px;
     margin-left: auto;
     align-content: center;
-    margin-bottom: 20%;
+    margin-top: -6%; 
 }
 
 .ykbutton {
@@ -133,4 +149,36 @@ p {
 100% {
   background-position: 0% 50%;
 }
+}
+
+@media (max-width: 1200px) {
+  .roomies-text {
+      margin-left: 60px; /* Reduce left margin for smaller screens */
+  }
+
+  .spline-container {
+      margin-right: 60px; /* Reduce right margin for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .roomies-text {
+      margin-left: 30px; /* Further reduce left margin */
+  }
+
+  .spline-container {
+      margin-right: 30px; /* Further reduce right margin */
+  }
+}
+
+@media (max-width: 768px) {
+  .roomies-text {
+      margin-left: 20px; /* Minimal left margin for mobile */
+      max-width: 100%; /* Allow full width on small screens */
+  }
+
+  .spline-container {
+      margin-right: 20px; /* Minimal right margin for mobile */
+      max-width: 100%; /* Allow full width on small screens */
+  }
 }
