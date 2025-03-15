@@ -1,18 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import ProfilePage from "./pages/ProfilePage";
 import LandingPage from "./pages/LandingPage";
 
+const About = () => <h2>About Page</h2>;
+const Contact = () => <h2>Contact Page</h2>;
 
 function App() {
     return (
         <>
-            <ProfilePage></ProfilePage>
-            <LandingPage />
-            {/* <Routes>
-                <Route path="/" element={<Home />} />
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-            </Routes> */}
+            </Routes>
         </>
     );
 }

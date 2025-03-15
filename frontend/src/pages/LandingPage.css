@@ -1,44 +1,4 @@
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: #ECECDF;
-    background: radial-gradient(at 18% 99%,
-            #899cfb 0px, transparent 50%),
-        radial-gradient(at 80% 50%, #899cfb 0px, transparent 50%);
-}
-
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.navbar-btn {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    color: #1F1F41;
-    width: 216px;
-    height: 54px;
-    background: transparent;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.navbar-btn:hover {
-    background-color: #1F1F41;
-    color: #ffffff;
-}
-
-/* Gradient Animated Text */
 .roomies-h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: 96px;
-    text-align: left;
     color: transparent;
     background: linear-gradient(30deg, #1F1F41, #899cfb);
     background-size: 400% 400%;
@@ -48,70 +8,6 @@ body {
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 36px;
-    margin: 5% 0;
-    text-align: left;
-    color: black;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    text-align: left;
-}
-
-.roomies-text {
-    flex: 1;
-    max-width: 50%;
-    margin-left: 120px;
-}
-
-.spline-container {
-    flex: 1;
-    max-width: 50%;
-    margin-right: 120px;
-    width: 600px;
-    height: 700px;
-    margin-left: auto;
-}
-
-.ykbutton {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    color: #ffffff;
-    width: 387px;
-    height: 64px;
-    background: linear-gradient(30deg, #1F1F41, #899cfb);
-    background-size: 400% 400%;
-    border-radius: 50px;
-    cursor: pointer;
-    border: none;
-    animation: buttonAnimation 4s ease infinite;
-}
-
-.ykbutton:hover {
-    background-position: 100% 0;
-    transform: scale(1.05);
-}
-
-@keyframes buttonAnimation {
     0% {
         background-position: 0% 50%;
     }

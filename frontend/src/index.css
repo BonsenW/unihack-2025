@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
@@ -118,5 +120,67 @@
 
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+/* src/index.css or src/App.css */
+
+/* Apply Poppins font to the entire body */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f4;
+    /* Optional: Default background */
+    color: #333;
+    /* Optional: Default text color */
+}
+
+/* Apply Inter font to all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Optional: Customize specific heading styles */
+h1 {
+    font-weight: 700;
+    /* Bold style for h1 */
+}
+
+h2 {
+    font-weight: 600;
+    /* Slightly lighter bold for h2 */
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    /* Regular style for h3 and smaller headings */
+}
+
+@layer utilities {
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .animate-gradient {
+        background: linear-gradient(30deg, #1F1F41, #899cfb);
+        background-size: 400% 400%;
+        animation: gradientAnimation 4s ease infinite;
     }
 }
