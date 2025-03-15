@@ -1,6 +1,7 @@
 import { DataAPIClient, Db, VectorizeDoc } from "@datastax/astra-db-ts";
 // db.js
-require('dotenv').config();
+import dotenv from 'dotenv'
+dotenv.config()
 // const { DataAPIClient } = require('@datastax/astra-db-ts');
 
 // // Initialize the client
@@ -30,6 +31,7 @@ require('dotenv').config();
  * @throws Will throw an error if the environment variables
  * `ASTRA_DB_API_ENDPOINT` or `ASTRA_DB_APPLICATION_TOKEN` are not defined.
  */
+
 export function connectDb(): Db {
   const { ASTRA_DB_CONN_STRING: endpoint, ASTRA_DB_TOKEN: token } =
     process.env;

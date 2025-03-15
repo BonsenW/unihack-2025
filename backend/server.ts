@@ -1,10 +1,13 @@
-require('dotenv').config()
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config()
+import path from 'path';
 const app = express();
-import { connectDb } from './db'
+import { connectDb } from "./db.js";
 import { VectorizeDoc, Db, Collection } from "@datastax/astra-db-ts";
 import fs from "fs";
+
+import { initializeLangflow } from './langflow.js';
 
 // const dummyData = require('./data/dummyData.json')
 
@@ -12,7 +15,7 @@ import fs from "fs";
 app.use(express.json());
 
 // API Routes config
-const userRoute = require('./routes/users');
+import userRoute from './routes/users.js';
 app.use('/api/users', userRoute);
 
 // Serve static files from React
@@ -116,9 +119,15 @@ async function uploadJsonData(
 
 const PORT = process.env.PORT || 5000;
 
+
+
 // Start server
 const startServer = async () => {
     const db = await connectDb();
+
+    await initializeLangflow();
+
+
 
     // const userCollection = db.collection('user_preferences');
 
@@ -129,34 +138,34 @@ const startServer = async () => {
     app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
 };
 
-let inputValue = ""; // Insert input value here
+// let inputValue = ""; // Insert input value here
 
-fetch(
-  "https://api.langflow.astra.datastax.com/lf/264dd2c4-6626-4af0-9f43-ef569e57dc2c/api/v1/run/f83f4261-bab2-47c7-9330-22f0b2b6444e?stream=false",
-  {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${process.env.DATASTAX_TOKEN}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-			input_value: inputValue, 
-      output_type: "chat",
-      input_type: "chat",
-      tweaks: {
-        "ChatInput-DTz08": {},
-        "Prompt-zjQZw": {},
-        "ChatOutput-QRH2J": {},
-        "ParseData-wovQq": {},
-        "GoogleGenerativeAIModel-AfoqL": {},
-        "AstraDB-lTea5": {}
-}
-    }),
-  },
-)
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+// fetch(
+//   "https://api.langflow.astra.datastax.com/lf/264dd2c4-6626-4af0-9f43-ef569e57dc2c/api/v1/run/f83f4261-bab2-47c7-9330-22f0b2b6444e?stream=false",
+//   {
+//     method: "POST",
+//     headers: {
+//       "Authorization": `Bearer ${process.env.DATASTAX_TOKEN}`,
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+// 			input_value: inputValue, 
+//       output_type: "chat",
+//       input_type: "chat",
+//       tweaks: {
+//         "ChatInput-DTz08": {},
+//         "Prompt-zjQZw": {},
+//         "ChatOutput-QRH2J": {},
+//         "ParseData-wovQq": {},
+//         "GoogleGenerativeAIModel-AfoqL": {},
+//         "AstraDB-lTea5": {}
+// }
+//     }),
+//   },
+// )
+//   .then(res => res.json())
+//   .then(data => console.log(data))
+//   .catch(error => console.error('Error:', error));
 
 
 startServer();

@@ -1,12 +1,22 @@
-const express = require('express');
-const app = express.Router();
+import express from 'express';
+const router = express.Router();
+import { flow } from '../langflow';
 
-const dummyData = require('../data/dummyData.json');
+import dummyData from '../data/dummyData.json';
 
 
-app.get('/', (req, res) => {
-    res.json(dummyData);
+router.post('/', async (req, res) => {
+    try {
+        const response = await flow.run("6");
+        console.log(response.chatOutputText())
+        res.status(200).json({message: "success"})
+        return
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({error: error})
+        return
+    }
 })
 
 
-module.exports = app;
+export default router
