@@ -46,7 +46,7 @@ const ChatPage: React.FC = () => {
                 </div>
                 <div className="msg-container">
                     <div className="messages">
-                        <p>Messages will appear here...</p> 
+                        <p>Messages will appear here...really it will, no im not just stalling for time</p> 
                     </div>
                     <form className="send-container">
                         <input type="text" id="message-input"></input>
