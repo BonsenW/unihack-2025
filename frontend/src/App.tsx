@@ -1,11 +1,16 @@
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import LandingPage from "./pages/LandingPage";
-import { Home } from "lucide-react";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage"
 
 function App() {
     return (
-        <HomePage></HomePage>
+        <>
+            <LandingPage />
+            {/* <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes> */}
+        </>
     );
 }
 
