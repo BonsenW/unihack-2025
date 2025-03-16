@@ -132,7 +132,9 @@ router.get('/match/userData/:userId', async (req, res) => {
 
         console.log(jsonData)
 
-        const users = await User.find({ userId: { $in: jsonData.userId } })
+        const users = await User.find({ userId: { $in: jsonData.userIds } })
+
+        console.log(users)
 
         res.status(200).json(users)
         return
