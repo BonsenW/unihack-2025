@@ -5,11 +5,11 @@ import {
     NavigationMenuList,
 } from "../ui/navigation-menu";
 
-const LandingPageNavBar = () => {
+const HomePageNavBar = () => {
     return (
         <NavigationMenu>
             <NavigationMenuList className="flex w-screen justify-between px-40 py-20 items-center">
-                {/* Left Section (Logo + Brand Name) */}
+                {/* Left Section (Logo + Home) */}
                 <div className="flex items-center gap-4">
                     <NavigationMenuItem>
                         <Link to="/" className="gap-16 font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer">
@@ -19,23 +19,41 @@ const LandingPageNavBar = () => {
                     </NavigationMenuItem>
                 </div>
 
-                {/* Right Section (Links) */}
+                {/* Right Section (Profile, Preferences, Notifications, Logout) */}
                 <div className="flex items-center gap-4">
                     <NavigationMenuItem>
                         <Link
-                            to="/about"
+                            to="/profile"
                             className="font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#1F1F41] hover:text-white"
                         >
-                            About Us
+                            My Profile
                         </Link>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
                         <Link
-                            to="/contact"
+                            to="/preferences"
                             className="font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#1F1F41] hover:text-white"
                         >
-                            Contact
+                            Preferences
+                        </Link>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <Link
+                            to="/notifications"
+                            className="font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#1F1F41] hover:text-white"
+                        >
+                            Notifications
+                        </Link>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <Link
+                            to="/logout"
+                            className="font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#1F1F41] hover:text-white"
+                        >
+                            Logout
                         </Link>
                     </NavigationMenuItem>
                 </div>
@@ -44,4 +62,4 @@ const LandingPageNavBar = () => {
     );
 };
 
-export default LandingPageNavBar;
+export default HomePageNavBar;
