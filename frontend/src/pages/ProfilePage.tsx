@@ -90,6 +90,9 @@ const ProfilePage: React.FC = () => {
 
                     </CardContent>  
                 </Card>
+                    <div className="flex justify-center mt-6">
+                        <Button className="save-button">Save Changes</Button>
+                    </div>
             </div>
         </>
     );
