@@ -1,5 +1,5 @@
 import axios from "axios";
-import { User } from "./User"
+import { User, PostUser } from "./User"
 
 
 // should probably be an env variable but whatever
@@ -12,7 +12,7 @@ const api = axios.create({
 // ! DO TYPINGS FOR ALL OF THESE PLEASE
 
 // add user
-export const postAddUser = async (data: User) => {
+export const postAddUser = async (data: PostUser) => {
     try {
         const response = await api.post("/api/users/addUser", data)
         return response.data;
