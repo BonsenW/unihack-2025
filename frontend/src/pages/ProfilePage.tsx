@@ -3,12 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import "./ProfilePage.css";
 import { Button } from "@/components/ui/button";
 
+
 const ProfilePage: React.FC = () => {
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
     const [location, setLocation] = useState("");
     const [email, setEmail] = useState("");
+
 
     return (
         <>

@@ -44,22 +44,24 @@ p{
     color: #ffffff;  /* White text color on hover */
   }
 
-  p{
+  .preferences-p{
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     text-align: left;
+    margin-top: 20px;
   }
 
 .arrows-container {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    width: 90%; 
+    width: 100%; 
     margin: 0 auto; 
+    min-height: 100vh;  
 }
 
 .arrow-left, .arrow-right {
-    margin: 0 120px; 
+    margin: 0 180px; 
 }
 
 .arrow-left svg, .arrow-right svg {
