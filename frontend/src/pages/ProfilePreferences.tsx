@@ -51,11 +51,11 @@ const ProfilePreferences: React.FC = () => {
             <div className="arrow-container flex justify-between items-center bg-[#ECECDF]">
                 {/* Left Arrow */}
                 <div className="arrow-left">
-                    <Link to="/photospage.tsx">
+                    <Link to="/home">
                         <svg width="50px" height="50px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000" />
                         </svg>
-                        <p className="preferences-p">Add photos</p>
+                        <p className="preferences-p">Home</p>
                     </Link>
                 </div>
     
