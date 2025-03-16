@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
-import ProfilePage from "./pages/ProfilePage";
 
 const About = () => <h2>About Page</h2>;
 const Contact = () => <h2>Contact Page</h2>;
