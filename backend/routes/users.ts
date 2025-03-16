@@ -4,6 +4,21 @@ import { flow } from '../langflow';
 import { mdb } from '../mongo';
 import User from '../models/User';
 
+
+// get all users in the collection
+router.get('/', async (req, res) => {
+    try {
+        const users = await User.find();
+        console.log(users)
+        res.status(200).json(users)
+        return
+
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({error: error})
+    }
+})
+
 router.post('/addUser', async (req, res) => {
     try {
 
@@ -103,6 +118,7 @@ router.get('/match/userData/:userId', async (req, res) => {
         const response = await flow.run(userId);
 
         const responseText = response.chatOutputText()
+        console.log("/match/userData/:userId data", responseText)
 
         const jsonMatch = responseText.match(/\{[\s\S]*\}/);
 
