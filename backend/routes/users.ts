@@ -2,9 +2,7 @@ import express from 'express';
 const router = express.Router();
 import { flow } from '../langflow';
 import { mdb } from '../mongo';
-import User from '../models/user';
-
-import dummyData from '../data/dummyData.json';
+import User from '../models/User';
 
 router.post('/addUser', async (req, res) => {
     try {
@@ -27,6 +25,29 @@ router.post('/addUser', async (req, res) => {
         return
     } catch (error) {
         console.log("error inserting user", error)
+        res.status(500).json({error: error})
+    }
+})
+
+router.put('/updateUser/:userId', async (req, res) => {
+    try {
+        const userId = Number(req.params.userId)
+        const updateData = req.body
+
+        const updatedUser = await User.findOneAndUpdate(
+            { userId: userId },
+            { $set: updateData },
+            { new: true }
+        )
+
+        if (!updatedUser) {
+            res.status(404).json({error: "User not found"})
+            return
+        }
+
+        res.status(200).json(updatedUser)
+    } catch (error) {
+        console.log(error)
         res.status(500).json({error: error})
     }
 })
@@ -54,13 +75,20 @@ router.get('/:userId', async (req, res) => {
 })
 
 
-router.post('/:userId', async (req, res) => {
+router.get('/match/:userId', async (req, res) => {
     try {
         const userId = req.params.userId;
         const response = await flow.run(userId);
 
-        console.log(response.outputs)
-        res.status(200).json({output: response.outputs})
+        const responseText = response.chatOutputText()
+
+        const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+
+        const jsonData = JSON.parse(jsonMatch[0])
+
+        console.log(response.chatOutputText())
+        console.log(jsonData)
+        res.status(200).json(jsonData)
         return
     } catch (error) {
         console.log(error)
@@ -69,5 +97,31 @@ router.post('/:userId', async (req, res) => {
     }
 })
 
+router.get('/match/userData/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const response = await flow.run(userId);
+
+        const responseText = response.chatOutputText()
+
+        const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+
+        if (!jsonMatch) {
+            res.status(400).json({error: "Invalid response format/AI model didnt produce proper format"})
+        }
+
+
+        const jsonData = JSON.parse(jsonMatch[0])
+
+        const users = await User.find({ userId: { $in: jsonData.userId } })
+
+        res.status(200).json(users)
+        return
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({error: error})
+        return
+    }
+})
 
 export default router
