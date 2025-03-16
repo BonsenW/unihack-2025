@@ -76,7 +76,7 @@ const ChatPage: React.FC = () => {
                 <div className="chatPage">
                     <div className='chat-left'>
                         <div className='profile-detail'>
-                            <h1>Name</h1>
+                            <h1 className="large-text">Name</h1>
                             <p id="direct-msg">Direct Messages</p>
                         </div>
                         <div className='chat-list'>
@@ -105,7 +105,7 @@ const ChatPage: React.FC = () => {
                     </div>
                     <div className='chat-right'>
                         <div className='friend-detail'>
-                            <h1>{selectedChat}</h1>
+                            <h1 className="large-text">{selectedChat}</h1>
                             <p>{selectedChatData ? selectedChatData.description : 'Fill me in!'}</p>
                         </div>
                         <div className="msg-container">
