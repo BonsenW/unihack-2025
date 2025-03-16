@@ -30,11 +30,11 @@ const HomePage: React.FC = () => {
     const person = db[currentIndex];
 
     return (
-        <div>
+        <div className="h-200">
             <HomePageNavBar />
 
-            <div className="relative flex justify-center items-center h-screen">
-                <div className="relative w-100 h-100">
+            <div className="relative flex justify-center items-center">
+                <div className="relative w-100 h-150">
                     <h1 className="text-left relative z-50 left-58 top-20 text-5xl text-black ps-1.5 pe-1.5">
                         <b>{person.name}</b>
                     </h1>
