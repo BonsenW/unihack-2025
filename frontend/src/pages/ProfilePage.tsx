@@ -14,11 +14,11 @@ const ProfilePage: React.FC = () => {
 
     return (
         <>
-            <div className="flex flex-col gap-12 justify-center items-center w-screen h-screen bg-[#ECECDF]">
+            <div className="flex flex-col gap-12 justify-center items-center w-full pb-5     bg-[#ECECDF]">
             
                 <Card className="w-150 p-6 rounded-2xl bg-[#ECECDF]/40 shadow-none border-0">
                     <CardHeader className="text-center">
-                            <CardTitle className="profile-title text-6xl text-[#1F1F41] align-middle"><b>Edit Profile</b></CardTitle>
+                            <CardTitle className="profile-title text-6xl text-[#1F1F41] align-middle pt-20"><b>Edit Profile</b></CardTitle>
                     </CardHeader>
                     
 
@@ -97,7 +97,7 @@ const ProfilePage: React.FC = () => {
                 </div>
 
             {/* Right Arrow */}
-            <div className="arrow-right">
+            <div className="arrow-right-profile">
                 <Link to="/photos">
                     <svg fill="#000000" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 330 330">

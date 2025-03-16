@@ -10,3 +10,19 @@ h3 {
     font-style: normal;
     text-align: left;
 }
+
+.arrow-right-profile {
+    position: absolute;
+    right: 100px; 
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.arrow-right-profile svg {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
