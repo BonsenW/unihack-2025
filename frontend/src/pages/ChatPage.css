@@ -22,6 +22,7 @@ body{
 
 .chat-left {
     width: 25%;
+    max-height: 100vh;
     border-right: 2px solid #333;
     background-color: #899cfb;
     display: flex;
@@ -32,6 +33,44 @@ body{
     width: 75%;
     display: flex;
     flex-direction: column;
+}
+
+.chat-list {
+    max-height: 80vh; /* Adjust this value to control the height of the chat list */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.chat-option-content {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between profile picture and text */
+}
+
+.chat-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.chat-text {
+    flex: 1; /* Ensures the text takes up the remaining space */
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat-option:hover {
+    background-color: #e5e5ea; /* Light gray background on hover */
+}
+
+.chat-option.bg-blue-300 {
+    background-color: #bfdbfe; /* Selected chat background color */
 }
 
 .profile-detail {
@@ -52,29 +91,104 @@ body{
     width: 100%;
 }
 
-.messages {
-    flex: 1;
+.small-text {
+    font-size: 13px;
 }
 
-.send-container{
-    margin-top: auto;
+.message-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-height: 50vh; 
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; 
+    scrollbar-color: #e5e5ea transparent; 
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 18px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* User messages (right-aligned) */
+.message.user {
+    background-color: #899cfb;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+/* Tayla's messages (left-aligned) */
+.message.tayla {
+    background-color: #e5e5ea;
+    color: black;
+    align-self: flex-start;
+}
+
+.message.greg {
+    background-color: #e5e5ea;
+    color: black;
+    align-self: flex-start;
+}
+
+.message.johnny {
+    background-color: #e5e5ea;
+    color: black;
+    align-self: flex-start;
+}
+
+.send-container {
+    display: flex;
+    align-items: center;
     width: 100%;
 }
 
 .send-container input {
+    flex: 1; /* Input takes up remaining space */
+    min-width: 0; /* Prevents input from overflowing */
     border: 1px solid grey;
-    width: 90%;
     height: 4vh;
     border-radius: 10px;
+    padding: 5px 10px;
 }
 
-.send-container input,
 .send-container Button {
-  flex: 1;
+    width: 80px; /* Set a fixed width to prevent shrinking */
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.match-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+#match-declaration {
+    color: #6b7280; 
+    margin-bottom: 10px;
+    text-decoration: underline;
 }
 
 #direct-msg {
-    margin-top: 40px;
+    margin-top: 30px;
+
 }
 
 h1 {
