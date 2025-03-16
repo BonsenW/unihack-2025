@@ -48,7 +48,7 @@ const ProfilePreferences: React.FC = () => {
 
     return (
         <>
-            <div className="arrow-container flex justify-between items-center w-full min-h-screen bg-[#ECECDF] px-4">
+            <div className="arrow-container flex justify-between items-center bg-[#ECECDF] mt-70">
                 {/* Left Arrow */}
                 <div className="arrow-left">
                     <Link to="/photospage.tsx">
@@ -61,10 +61,10 @@ const ProfilePreferences: React.FC = () => {
     
                 {/* Card */}
                 <Card className="card bg-[#ECECDF] max-w-[800px] w-4/5 mx-4 shadow-none border-0">
-                    <div className="flex flex-col gap-12 justify-center items-center w-full min-h-screen bg-[#ECECDF]">
+                    <div className="flex flex-col gap-6 justify-center items-center w-full min-h-screen bg-[#ECECDF]">
                         <div className="text-center pt-20">
                             <CardTitle className="preferences-title"><b>Preferences</b></CardTitle>
-                            <p>Add your preferences so we can match you with most compatible roommate</p>
+                            <p className="preference-p text-center">Add your preferences so we can match you with most compatible roommate</p>
                         </div>
                         <Card className="w-150 p-6 rounded-2xl bg-[#ECECDF]/40 border-0 shadow-none">
                             <CardContent className="flex flex-col gap-4 w-full bg-[#ECECDF]/20">

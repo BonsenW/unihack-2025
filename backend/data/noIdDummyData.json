@@ -1,6 +1,7 @@
 [
     {
       "gender": "No preference",
+      "houseLocation": "Clayton",
       "age": ["21-24", "25-30"],
       "interests": ["Games", "Sports", "Music"],
       "pets": "No preference",
@@ -9,6 +10,7 @@
     },
     {
       "gender": "Female",
+      "houseLocation": "Huntingdale",
       "age": ["25-30", "30-34"],
       "interests": ["Cooking", "Photography", "Dance"],
       "pets": "Cats",
@@ -17,6 +19,7 @@
     },
     {
       "gender": "No preference",
+      "houseLocation": "Oakleigh",
       "age": ["18-20", "21-24"],
       "interests": ["Games", "Food", "Music"],
       "pets": "Dogs",
@@ -25,6 +28,7 @@
     },
     {
       "gender": "Male",
+      "houseLocation": "Murumbeena",
       "age": ["30-34", "35+"],
       "interests": ["Sports", "Photography"],
       "pets": "No preference",
@@ -33,6 +37,7 @@
     },
     {
       "gender": "Female",
+      "houseLocation": "Hughesdale",
       "age": ["18-20", "21-24", "25-30"],
       "interests": ["Cooking", "Food", "Dance"],
       "pets": "Cats",
@@ -41,6 +46,7 @@
     },
     {
       "gender": "Male",
+      "houseLocation": "Hughesdale",
       "age": ["35+"],
       "interests": ["Photography", "Music"],
       "pets": "Other",
@@ -49,6 +55,7 @@
     },
     {
       "gender": "Prefer not to disclose",
+      "houseLocation": "Clayton",
       "age": ["25-30", "30-34"],
       "interests": ["Games", "Sports", "Food"],
       "pets": "No preference",
@@ -57,6 +64,7 @@
     },
     {
       "gender": "No preference",
+      "houseLocation": "Huntingdale",
       "age": ["18-20", "21-24"],
       "interests": ["Cooking", "Music", "Dance"],
       "pets": "No pets",
@@ -65,6 +73,7 @@
     },
     {
       "gender": "Male",
+      "houseLocation": "Murumbeena",
       "age": ["21-24"],
       "interests": ["Games", "Photography", "Sports"],
       "pets": "Dogs",
@@ -73,6 +82,7 @@
     },
     {
       "gender": "Female",
+      "houseLocation": "Oakleigh",
       "age": ["25-30", "30-34", "35+"],
       "interests": ["Food", "Music", "Dance"],
       "pets": "No preference",
