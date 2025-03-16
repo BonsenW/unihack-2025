@@ -48,14 +48,14 @@ const ProfilePreferences: React.FC = () => {
 
     return (
         <>
-            <div className="arrow-container flex justify-between items-center bg-[#ECECDF] mt-70">
+            <div className="arrow-container flex justify-between items-center bg-[#ECECDF]">
                 {/* Left Arrow */}
                 <div className="arrow-left">
                     <Link to="/photospage.tsx">
                         <svg width="50px" height="50px" viewBox="0 0 1024 1024" className="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <path d="M768 903.232l-50.432 56.768L256 512l461.568-448 50.432 56.768L364.928 512z" fill="#000000" />
                         </svg>
-                        <h3 className="text-center">Add photos</h3>
+                        <p className="preferences-p">Add photos</p>
                     </Link>
                 </div>
     
@@ -178,7 +178,7 @@ const ProfilePreferences: React.FC = () => {
                             C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
                             C255,161.018,253.42,157.202,250.606,154.389z"/>
                         </svg>
-                        <h3 className="text-center">Edit profile</h3>
+                        <p className="preferences-p">Edit profile</p>
                     </Link>
                 </div>
             </div>
