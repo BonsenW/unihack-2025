@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 {/* Right Spline 3D Model Section */}
-                <div className="lg:max-w-[1000px] h-[600px] lg:h-[800px] overflow-hidden spline-container">
+                <div className="w-[800px] h-[800px] overflow-hidden">
                     <Spline scene="https://prod.spline.design/QWVez0kuhwarUx0V/scene.splinecode" />
                 </div>
 
