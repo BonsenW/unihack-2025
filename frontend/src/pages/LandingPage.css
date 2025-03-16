@@ -45,3 +45,9 @@
         max-width: 100%;
     }
 }
+
+.spline-container canvas {
+    position: absolute;
+    top: 20%;
+    left: 20%
+}
