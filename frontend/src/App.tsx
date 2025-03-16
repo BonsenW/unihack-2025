@@ -11,7 +11,7 @@ const Contact = () => <h2>Contact Page</h2>;
 function App() {
     return (
         <>
-            <Routes>
+             <Routes>
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
