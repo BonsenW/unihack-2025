@@ -1,6 +1,6 @@
 # Team Details
-Name: uh huh
-Product name: Roomies
+- Name: uh huh
+- Product: Roomies
 
 # About
 With the housing, living, rental, everything crisis imploding in our day-to-day life, we've seen people struggling to make ends meet and scraping the bottom trying to survive. 
@@ -16,6 +16,10 @@ A website akin to Hinge where instead of finding dates, you **swipe for whether 
 - Tailored matches using Langflow API.
 - Calming design to soothe stressful situation
 - Can put in preferences a user has.
+
+# Tech stack
+- Frontend: Typescript, React, HTML/CSS, Bootstrap, Tailwind
+- Backend: Typescript, Langflow API, REST API, Express.JS, Node.JS, MongoDB, Astra DB
 
 # Screenshots
 ![landing_page](https://github.com/user-attachments/assets/4ce60cb8-2cad-4965-b8bd-5aa10761bb4a)
