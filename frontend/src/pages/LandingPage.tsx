@@ -26,7 +26,7 @@ const LandingPage: React.FC = () => {
                     <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
                         Intuitive design <br /> Catered towards your specific needs No more endlessly searching for a place to live, <br /> And no more incompatible room mates
                     </p>
-                    <Link to="/Login">
+                    <Link to="/login">
                         <Button className="px-8 py-4 text-xl font-semibold text-white bg-gradient-to-r from-[#1F1F41] to-[#899cfb] rounded-full transition-transform hover:scale-105 animate-gradient">
                             Find your soul<i>(room)</i>mate
                         </Button>
