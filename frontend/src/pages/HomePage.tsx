@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./HomePage.css";
 import HomePageNavBar from "@/components/custom/HomePageNavBar";
+import { User } from "@/api/User";
+import { getMatchUserData } from "@/api/api";
 
 interface Person {
     name: string;
@@ -17,7 +19,21 @@ const db: Person[] = [
 ];
 
 const HomePage: React.FC = () => {
+    const [people, setPeople] = useState<User[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getMatchUserData(1);
+                console.log(data);
+            } catch (error) {
+                console.error("Error fetching people data", error)
+            }
+        }
+
+        fetchData()
+    }, [])
 
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % db.length);
