@@ -2,6 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import "./ChatPage.css";  
 import { Button } from "@/components/ui/button";
 
+import taylaPic from "../assets/tayla.jpg";
+import gregPic from "../assets/greg.jpg";
+import johnnyPic from "../assets/johnny.jpg";
+
 const ChatPage: React.FC = () => {
 
     const [ selectedChat, setSelectedChat ] = useState<string>("tayla");
@@ -13,16 +17,17 @@ const ChatPage: React.FC = () => {
     }, [selectedChat]); // Runs when messages update
 
     const chats = [
-        { name: "tayla", message: "we can go to dinner at 7pm if you w...", description: "food, vibes, culture"},
-        { name: "greg", message: "i live near huntingdale, do you think...", description: "do you wanna build a snowman"},
+        { name: "tayla", message: "we can go to dinner at 7pm if you w...", description: "food, vibes, culture", profilePic: taylaPic},
+        { name: "greg", message: "i live near huntingdale, do you think...", description: "do you wanna build a snowman", profilePic: gregPic},
         { name: "tayla, greg, johnny", message: "living far from campus right now...", description: "the uh huh gang"},
+        { name: "johnny", message: "cool ill set up a group chat...", description: "hello hello", profilePic: johnnyPic},
     ];
 
     // Messages for each chat
     const messages: Record<string, { sender: string; text: string }[]> = {
         tayla: [
             { sender: "system", text: "YOU AND TAYLA ARE A MATCH!" },
-            { sender: "system", text: "SATURDAY, 15 MARCH 2025" },
+            { sender: "system", text: "SATURDAY, 20 MARCH 2025" },
             { sender: "user", text: "hey tayla, what were u trying to ask yesterday, asking now before i forget XD" },
             { sender: "tayla", text: "yea so whats the policy on pets, im babysitting my girlfriends mums boyfriends snake rn" },
             { sender: "user", text: "could we meet up to discuss this actually?" },
@@ -44,7 +49,13 @@ const ChatPage: React.FC = () => {
             { sender: "johnny", text: "wait seriously" },
             { sender: "tayla", text: "oh i mean...i can do 6 months but preferably 12 months if possible" },
             { sender: "greg", text: "do u think we could negotiate for a longer contract? did she say why it was only 6 months?" },
-            { sender: "greg", text: "living far from campus right now so ya know" },
+            { sender: "greg", text: "living far from campus right now so..." },
+        ],
+        johnny: [
+            { sender: "system", text: "YOU AND JOHNNY ARE A MATCH!" },
+            { sender: "system", text: "SATURDAY, 15 MARCH 2025" },
+            { sender: "johnny", text: "sorry i missed ur call, im totally down to meet up with tohers" },
+            { sender: "user", text: "cool ill set up a group chat then" },
         ],
     };
 
@@ -69,8 +80,19 @@ const ChatPage: React.FC = () => {
                             className={`chat-option ${selectedChat === chat.name ? 'bg-blue-300' : ''} p-2 cursor-pointer`}
                             onClick={() => handleChatSelect(chat.name)}
                         >
-                            <p>{chat.name}</p>
-                            <p className="small-text">{chat.message}</p>
+                            <div className="chat-option-content">
+                                {chat.profilePic && (
+                                    <img 
+                                        src={chat.profilePic} 
+                                        alt={chat.name} 
+                                        className="chat-profile-pic" 
+                                    />
+                                )}
+                                <div className="chat-text">
+                                    <p>{chat.name}</p>
+                                    <p className="small-text">{chat.message}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -94,9 +116,18 @@ const ChatPage: React.FC = () => {
                                     )}
                                 </div>
                             ) : (
-                                <p key={index} className={`message ${msg.sender === "user" ? "user" : msg.sender}`}>
-                                    {msg.text}
-                                </p>
+                                <div key={index} className={`message-container ${msg.sender === "user" ? "user" : msg.sender}`}>
+                                    {msg.sender !== "user" && (
+                                        <img 
+                                            src={chats.find(chat => chat.name === msg.sender)?.profilePic} 
+                                            alt={msg.sender} 
+                                            className="profile-pic" 
+                                        />
+                                    )}
+                                    <p className={`message ${msg.sender === "user" ? "user" : msg.sender}`}>
+                                        {msg.text}
+                                    </p>
+                                </div>
                             )
                         ))}
 
