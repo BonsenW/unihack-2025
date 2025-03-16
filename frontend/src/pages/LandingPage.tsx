@@ -15,10 +15,10 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* Main Section */}
-            <div className="flex flex-col lg:flex-row items-center px-40">
+            <div className="flex lg:flex-row px-40 mb-20">
 
                 {/* Left Text Section */}
-                <div className="flex flex-col space-y-4 text-center lg:text-left max-w-xl">
+                <div className="flex flex-col gap-6 space-y text-center lg:text-left max-w-xl flex-1">
                     <h1 className="text-8xl lg:text-9xl roomies-h1">
                         Roomies
                     </h1>
@@ -27,15 +27,17 @@ const LandingPage: React.FC = () => {
                         Intuitive design <br /> Catered towards your specific needs No more endlessly searching for a place to live, <br /> And no more incompatible room mates
                     </p>
                     <Link to="/login">
-                        <Button className="px-8 py-4 text-xl font-semibold text-white bg-gradient-to-r from-[#1F1F41] to-[#899cfb] rounded-full transition-transform hover:scale-105 animate-gradient">
+                        <Button className="px-16 py-6  text-xl font-semibold text-white bg-gradient-to-r from-[#1F1F41] to-[#899cfb] rounded-full transition-transform hover:scale-105 animate-gradient">
                             Find your soul<i>(room)</i>mate
                         </Button>
                     </Link>
                 </div>
 
                 {/* Right Spline 3D Model Section */}
-                <div className="w-[800px] h-[800px] overflow-hidden">
-                    <Spline scene="https://prod.spline.design/QWVez0kuhwarUx0V/scene.splinecode" />
+                <div className="ml-12">
+                    <div className="spline-model-component w-[700px] h-[700px] overflow-hidden  mt-[-100px]">
+                        <Spline scene="https://prod.spline.design/QWVez0kuhwarUx0V/scene.splinecode" />
+                    </div>
                 </div>
 
             </div>

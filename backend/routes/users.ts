@@ -114,6 +114,7 @@ router.get('/match/:userId', async (req, res) => {
 
 router.get('/match/userData/:userId', async (req, res) => {
     try {
+        console.log("matching....")
         const userId = req.params.userId;
         const response = await flow.run(userId);
 
@@ -128,6 +129,8 @@ router.get('/match/userData/:userId', async (req, res) => {
 
 
         const jsonData = JSON.parse(jsonMatch[0])
+
+        console.log(jsonData)
 
         const users = await User.find({ userId: { $in: jsonData.userId } })
 
