@@ -12,7 +12,7 @@ const HomePageNavBar = () => {
                 {/* Left Section (Logo + Home) */}
                 <div className="flex items-center gap-4">
                     <NavigationMenuItem>
-                        <Link to="/" className="gap-16 font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer">
+                        <Link to="/home" className="gap-16 font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer">
                             <img src="../../public/logo.png" alt="Roomies Logo" />
                             Home
                         </Link>
