@@ -46,8 +46,6 @@
     }
 }
 
-.spline-container canvas {
-    position: absolute;
-    top: 20%;
-    left: 20%
+.spline-model-component{
+    margin-bottom: 100px;
 }
