@@ -121,10 +121,10 @@ const ProfilePreferences: React.FC = () => {
                         {/* Garage Space */}
                         <h3 className="text-sm">Garage Space</h3>
                         <select
-                            value={budget}
-                            onChange={(e) => setBudget(e.target.value)}
+                            value={garage}
+                            onChange={(e) => setGarage(e.target.value)}
                             className="dropdown-field w-125 text-black bg-[#ECECDF] border-3 border-black rounded-md  pl-3 pr-10 py-2 appearance-none outline-none focus:ring-0 focus:border-black">
-                            <option value="">Select your budget</option>
+                            <option value="">Select your garage space</option>
                             <option value="garage-one-car">1 car</option>
                             <option value="garage-two-car">2 cars</option>
                             <option value="garage-na">N/A</option>
