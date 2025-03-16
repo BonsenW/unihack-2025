@@ -41,10 +41,10 @@ const HomePageNavBar = () => {
 
                     <NavigationMenuItem>
                         <Link
-                            to="/notifications"
+                            to="/chatpage"
                             className="font-inter font-bold text-[24px] text-[#1F1F41] w-[216px] h-[54px] flex items-center justify-center bg-transparent rounded-full cursor-pointer transition duration-300 ease-in-out hover:bg-[#1F1F41] hover:text-white"
                         >
-                            Notifications
+                            Chat
                         </Link>
                     </NavigationMenuItem>
 

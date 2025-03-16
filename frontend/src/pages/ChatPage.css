@@ -11,6 +11,16 @@ body{
     align-items: center;
 }
 
+.chatContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-bottom: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .chatPage {
     height: 80vh;
     width: 80vw;
@@ -171,6 +181,8 @@ body{
 .match-info {
     text-align: center;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-pic {
@@ -182,7 +194,7 @@ body{
 
 #match-declaration {
     color: #6b7280; 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-decoration: underline;
 }
 
@@ -193,5 +205,5 @@ body{
 
 h1 {
     font-size: 36px;
-    line-height: 80px;
+    line-height: 70px;
 }

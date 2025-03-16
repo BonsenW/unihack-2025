@@ -14,7 +14,7 @@ const ProfilePage: React.FC = () => {
         <>
             <div className="flex flex-col gap-12 justify-center items-center w-screen h-screen bg-[#ECECDF]">
             
-                <Card className="w-150 p-6 rounded-2xl bg-[#ECECDF]/40">
+                <Card className="w-150 p-6 rounded-2xl bg-[#ECECDF]/40 shadow-none border-0">
                     <CardHeader className="text-center">
                             <CardTitle className="profile-title text-6xl text-[#1F1F41] align-middle"><b>Edit Profile</b></CardTitle>
                     </CardHeader>

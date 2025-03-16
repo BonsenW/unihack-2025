@@ -10,12 +10,12 @@ const LandingPage: React.FC = () => {
         <div className="min-h-screen min-w-screen bg-[#ECECDF] bg-[radial-gradient(at_18%_99%,#899cfb_0px,transparent_50%),radial-gradient(at_80%_50%,#899cfb_0px,transparent_50%)] flex flex-col">
 
             {/* Navbar */}
-            <div className="flex-grow-0">
+            <div className="">
                 <LandingPageNavBar />
             </div>
 
             {/* Main Section */}
-            <div className="flex flex-col lg:flex-row items-center justify-between px-60">
+            <div className="flex flex-col lg:flex-row items-center px-40">
 
                 {/* Left Text Section */}
                 <div className="flex flex-col space-y-4 text-center lg:text-left max-w-xl">
@@ -34,7 +34,7 @@ const LandingPage: React.FC = () => {
                 </div>
 
                 {/* Right Spline 3D Model Section */}
-                <div className="w-full max-w-[800px] lg:max-w-[1000px] h-[600px] lg:h-[800px] spline-container">
+                <div className="lg:max-w-[1000px] h-[600px] lg:h-[800px] overflow-hidden spline-container">
                     <Spline scene="https://prod.spline.design/QWVez0kuhwarUx0V/scene.splinecode" />
                 </div>
 

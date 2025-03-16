@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import taylaPic from "../assets/tayla.jpg";
 import gregPic from "../assets/greg.jpg";
 import johnnyPic from "../assets/johnny.jpg";
+import HomePageNavBar from "@/components/custom/HomePageNavBar";
 
 const ChatPage: React.FC = () => {
 
@@ -67,77 +68,84 @@ const ChatPage: React.FC = () => {
     const selectedChatData = chats.find(chat => chat.name === selectedChat);
 
     return (
-        <div className="chatPage">
-            <div className='chat-left'>
-                <div className='profile-detail'>
-                    <h1>Name</h1>
-                    <p id="direct-msg" className="small-text">Direct Messages</p>
-                </div>
-                <div className='chat-list'>
-                    {chats.map((chat, index) => (
-                        <div
-                            key={index}
-                            className={`chat-option ${selectedChat === chat.name ? 'bg-blue-300' : ''} p-2 cursor-pointer`}
-                            onClick={() => handleChatSelect(chat.name)}
-                        >
-                            <div className="chat-option-content">
-                                {chat.profilePic && (
-                                    <img 
-                                        src={chat.profilePic} 
-                                        alt={chat.name} 
-                                        className="chat-profile-pic" 
-                                    />
-                                )}
-                                <div className="chat-text">
-                                    <p>{chat.name}</p>
-                                    <p className="small-text">{chat.message}</p>
-                                </div>
-                            </div>
+        <div className=" bg-gradient-to-br from-[#ECECDF] to-[#899cfb]">
+            {/* Navbar */}
+            <HomePageNavBar />
+            
+            <div className="chatContent">
+                <div className="chatPage">
+                    <div className='chat-left'>
+                        <div className='profile-detail'>
+                            <h1>Name</h1>
+                            <p id="direct-msg">Direct Messages</p>
                         </div>
-                    ))}
-                </div>
-            </div>
-            <div className='chat-right'>
-                <div className='friend-detail'>
-                    <h1>{selectedChat}</h1>
-                    <p className="small-text">{selectedChatData ? selectedChatData.description : 'Fill me in!'}</p>
-                </div>
-                <div className="msg-container">
-
-                    <div className="message-list small-text">
-                        {messages[selectedChat]?.map((msg, index) => (
-                            msg.sender === "system" ? (
-                                <div key={index} className="match-info small-text">
-                                    {msg.text.includes("MATCH") && (
-                                        <p id="match-declaration">{msg.text}</p>
-                                    )}
-                                    {msg.text.includes("MARCH") && (
-                                        <p id="message-date">{msg.text}</p>
-                                    )}
+                        <div className='chat-list'>
+                            {chats.map((chat, index) => (
+                                <div
+                                    key={index}
+                                    className={`chat-option ${selectedChat === chat.name ? 'bg-blue-300' : ''} p-2 cursor-pointer`}
+                                    onClick={() => handleChatSelect(chat.name)}
+                                >
+                                    <div className="chat-option-content">
+                                        {chat.profilePic && (
+                                            <img 
+                                                src={chat.profilePic} 
+                                                alt={chat.name} 
+                                                className="chat-profile-pic" 
+                                            />
+                                        )}
+                                        <div className="chat-text">
+                                            <p>{chat.name}</p>
+                                            <p className="small-text">{chat.message}</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            ) : (
-                                <div key={index} className={`message-container ${msg.sender === "user" ? "user" : msg.sender}`}>
-                                    {msg.sender !== "user" && (
-                                        <img 
-                                            src={chats.find(chat => chat.name === msg.sender)?.profilePic} 
-                                            alt={msg.sender} 
-                                            className="profile-pic" 
-                                        />
-                                    )}
-                                    <p className={`message ${msg.sender === "user" ? "user" : msg.sender}`}>
-                                        {msg.text}
-                                    </p>
-                                </div>
-                            )
-                        ))}
-
-                        {/* Scroll automatically to the bottom */}
-                        <div ref={messagesEndRef}></div>
+                            ))}
+                        </div>
                     </div>
-                    <form className="send-container">
-                        <input type="text" id="message-input"></input>
-                        <Button type="submit" id="send-button">Send</Button>
-                    </form>
+                    <div className='chat-right'>
+                        <div className='friend-detail'>
+                            <h1>{selectedChat}</h1>
+                            <p>{selectedChatData ? selectedChatData.description : 'Fill me in!'}</p>
+                        </div>
+                        <div className="msg-container">
+
+                            <div className="message-list small-text">
+                                {messages[selectedChat]?.map((msg, index) => (
+                                    msg.sender === "system" ? (
+                                        <div key={index} className="match-info small-text">
+                                            {msg.text.includes("MATCH") && (
+                                                <p id="match-declaration" className="small-text" >{msg.text}</p>
+                                            )}
+                                            {msg.text.includes("MARCH") && (
+                                                <p id="message-date" className="small-text">{msg.text}</p>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <div key={index} className={`message-container ${msg.sender === "user" ? "user" : msg.sender}`}>
+                                            {msg.sender !== "user" && (
+                                                <img 
+                                                    src={chats.find(chat => chat.name === msg.sender)?.profilePic} 
+                                                    alt={msg.sender} 
+                                                    className="profile-pic" 
+                                                />
+                                            )}
+                                            <p className={`message ${msg.sender === "user" ? "user" : msg.sender} small-text`}>
+                                                {msg.text}
+                                            </p>
+                                        </div>
+                                    )
+                                ))}
+
+                                {/* Scroll automatically to the bottom */}
+                                <div ref={messagesEndRef}></div>
+                            </div>
+                            <form className="send-container">
+                                <input type="text" id="message-input"></input>
+                                <Button type="submit" id="send-button">Send</Button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
