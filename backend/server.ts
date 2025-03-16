@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config()
 import path from 'path';
 const app = express();
+import cors from "cors"
 import { connectDb } from "./db.js";
 
 
@@ -13,6 +14,12 @@ import { InitializeMongoDb } from './mongo.js';
 
 // JSON middleware 
 app.use(express.json());
+
+// CORS
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}))
 
 // API Routes config
 import userRoute from './routes/users.js';
