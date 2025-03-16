@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
 import "./ProfilePreferences.css";
+import { postAddUser } from "@/api/api";
+import { User, PostUser } from "@/api/User";
 
 const ProfilePreferences: React.FC = () => {
     const [gender, setGender] = useState("");
@@ -12,6 +14,37 @@ const ProfilePreferences: React.FC = () => {
     const [pets, setPets] = useState("");
     const [budget, setBudget] = useState("");
     const [garage, setGarage] = useState("");
+
+    const [loading, setLoading] = useState(false); // Loading state
+    const [error, setError] = useState(""); // Error state
+    const [success, setSuccess] = useState(""); // Success message
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true)
+
+        const userData: PostUser = {
+            gender: gender,
+            houseLocation: location,
+            ageRange: [age],
+            interests: [interests],
+            pets: pets,
+            budgetRange: budget,
+            garageSpace: garage
+        }
+
+        try {
+            await postAddUser(userData); // Send data to the backend
+            setSuccess("User added successfully!");
+            setError(""); // Clear any previous errors
+          } catch (err) {
+            console.error(err)
+            setError("There was an error adding the user.");
+            setSuccess(""); // Clear success message
+          } finally {
+            setLoading(false); // Stop loading
+          }
+    }
 
     return (
         <>
@@ -128,7 +161,9 @@ const ProfilePreferences: React.FC = () => {
                         </CardContent>  
                         </Card>
                         <div className="flex justify-center mt-6">
-                            <Button className="save-button">Save Changes</Button>
+                            <Button onClick={handleSubmit} className="save-button">
+                                {loading ? "Saving..." : "Save Changes"}
+                            </Button>
                         </div>
                     </div>
                 </Card>
